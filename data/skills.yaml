@@ -1,0 +1,54 @@
+- name: Programming Languages
+  icon: code
+  skills:
+    - Ruby
+    - JavaScript (ES5+)
+    - TypeScript
+    - Rust
+
+- name: Backend Development
+  icon: server
+  skills:
+    - Ruby on Rails
+    - Node.js
+    - Express.js
+    - PHP
+    - REST
+
+- name: Frontend Development
+  icon: globe
+  skills:
+    - HTML5
+    - CSS3
+    - Tailwind CSS
+    - Vue.js
+    - Nuxt.js
+    - Bootstrap
+
+- name: Databases
+  icon: database
+  skills:
+    - MySQL
+    - PostgreSQL
+    - Redis
+    - MongoDB
+    - Neo4j
+
+- name: DevOps & Cloud
+  icon: cloud
+  skills:
+    - CI/CD
+    - Code Review
+    - GitHub
+    - GitLab
+    - SSH
+    - Bash
+    - Vim
+
+- name: Tools
+  icon: tools
+  skills:
+    - Git
+    - Mise
+    - Docker
+    - Ansible
