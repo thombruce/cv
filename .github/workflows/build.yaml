@@ -9,7 +9,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: sudo apt update
-      - run: sudo apt install fonts-fira
+      # - run: sudo apt install fonts-fira
+
+      - run: mkdir -p ~/.fonts
+      - run: wget https://github.com/google/fonts/archive/refs/heads/main.zip -O google-fonts.zip
+      - run: unzip google-fonts.zip -d ~/.fonts
+      - run: fc-cache -fv
+
       - run: sudo apt install fonts-font-awesome
 
       - uses: typst-community/setup-typst@v4
