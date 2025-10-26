@@ -1,22 +1,20 @@
-# Source: https://github.com/marketplace/actions/github-action-for-typst
+name: Render paper.pdf
 
-name: Build Typst document
-on: [push, workflow_dispatch]
-
-permissions:
-  contents: write
+on: push
 
 jobs:
-  build:
+  render-paper:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        
-      - name: Typst
-        uses: lvignoli/typst-action@main
+      - uses: actions/checkout@v4
+
+      - uses: typst-community/setup-typst@v4
         with:
-          source_file: main.typ
+          typst-version: 0.13.1
+
+      # 🎉 Now Typst is installed!
+
+      - run: typst compile main.typ .output/main.pdf
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
@@ -33,4 +31,4 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: main.pdf
+          files: .output/main.pdf
