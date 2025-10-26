@@ -11,12 +11,15 @@ jobs:
       - run: sudo apt update
       # - run: sudo apt install fonts-fira
 
+      # This is an annoying way about this, as the google-fonts download is huge...
+      # ...and we really just need the one. I need to find a better way to just pull fira-sans.
       - run: mkdir -p ~/.fonts
       - run: wget https://github.com/google/fonts/archive/refs/heads/main.zip -O google-fonts.zip
       - run: unzip google-fonts.zip -d ~/.fonts
-      - run: fc-cache -fv
 
       - run: sudo apt install fonts-font-awesome
+
+      - run: fc-cache -fv
 
       - uses: typst-community/setup-typst@v4
         with:
