@@ -3,13 +3,13 @@ name: Compile CV
 on: push
 
 jobs:
-  render-paper:
+  compile:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - run: sudo apt update
-      - run: sudo apt install fonts-firasans
+      - run: sudo apt install fonts-fira
       - run: sudo apt install fonts-font-awesome
 
       - uses: typst-community/setup-typst@v4
