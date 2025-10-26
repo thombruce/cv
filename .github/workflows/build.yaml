@@ -8,6 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - run: apt update
+      - run: apt install fonts-fira-sans
+      - run: apt install fonts-font-awesome
+
       - uses: typst-community/setup-typst@v4
         with:
           typst-version: 0.13.1
