@@ -1,5 +1,11 @@
 # README
 
+```sh
+typst compile main.typ .output/main.pdf
+```
+
+## Notes
+
 Presently requires the use of Typst v0.13.1 which has recently become outdated.
 
 An update to the upstream template used in generating the CV should resolve the issue.
