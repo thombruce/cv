@@ -8,18 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: sudo apt update
-      # - run: sudo apt install fonts-fira
-
-      # This is an annoying way about this, as the google-fonts download is huge...
-      # ...and we really just need the one. I need to find a better way to just pull fira-sans.
-      - run: mkdir -p ~/.fonts
-      - run: wget https://github.com/google/fonts/archive/refs/heads/main.zip -O google-fonts.zip
-      - run: unzip google-fonts.zip -d ~/.fonts
-
-      - run: sudo apt install fonts-font-awesome
-
-      - run: fc-cache -fv
+      - uses: fontist/setup-fontist@v2
+      - run: fontist install "Fira Sans"
+      - run: fontist install "Font Awesome"
 
       - uses: typst-community/setup-typst@v4
         with:
@@ -27,7 +18,7 @@ jobs:
 
       # 🎉 Now Typst is installed!
 
-      - run: typst compile main.typ .output/main.pdf
+      - run: typst compile main.typ .output/main.pdf --font-path ~/.fontist/fonts
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
