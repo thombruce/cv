@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: typst-community/setup-typst@v4
         with:
@@ -19,7 +19,7 @@ jobs:
       - run: typst compile main.typ .output/Thom-Bruce_CV.pdf --font-path=assets/fonts
 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: CV
           path: .output/Thom-Bruce_CV.pdf
@@ -29,7 +29,7 @@ jobs:
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
