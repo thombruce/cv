@@ -4,24 +4,10 @@ on: push
 
 jobs:
   compile:
-    # Disable the job!
-    # Why is it so difficult to programmatically install Font Awesome 7
-    # on Ubuntu?
-    # The apt package is outdated, fontist doesn't provide it...
-    # ...and I can't just run on Arch instead.
-    if: false
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-
-      - uses: fontist/setup-fontist@v2
-      - run: fontist install "Fira Sans"
-      - run: fontist create-formula https://use.fontawesome.com/releases/v7.1.0/fontawesome-free-7.1.0-desktop.zip
-
-      # TODO: Get Font Awesome 7 working. We may need to download manually, unzip and install the appropriate
-      #       otf fonts. However... this then might conflict with the ~/.fontist/fonts path used below.
 
       - uses: typst-community/setup-typst@v4
         with:
@@ -29,7 +15,7 @@ jobs:
 
       # 🎉 Now Typst is installed!
 
-      - run: typst compile main.typ .output/main.pdf --font-path ~/.fontist/fonts
+      - run: typst compile main.typ .output/main.pdf --font-path ~/assets/fonts
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
