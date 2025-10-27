@@ -16,13 +16,13 @@ jobs:
       # 🎉 Now Typst is installed!
 
       - run: mkdir .output
-      - run: typst compile main.typ .output/main.pdf --font-path=assets/fonts
+      - run: typst compile main.typ .output/Thom-Bruce_CV.pdf --font-path=assets/fonts
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
-          path: .output/main.pdf
+          name: CV
+          path: .output/Thom-Bruce_CV.pdf
 
       - name: Get current date
         id: date
@@ -33,4 +33,4 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: .output/main.pdf
+          files: .output/Thom-Bruce_CV.pdf
