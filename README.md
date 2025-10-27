@@ -1,7 +1,7 @@
 # README
 
 ```sh
-typst compile main.typ .output/main.pdf
+typst compile main.typ .output/main.pdf --font-path=assets/fonts
 ```
 
 ## Notes
