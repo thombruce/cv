@@ -15,7 +15,7 @@ jobs:
 
       # 🎉 Now Typst is installed!
 
-      - run: typst compile main.typ .output/main.pdf --font-path ~/assets/fonts
+      - run: typst compile main.typ .output/main.pdf --font-path=assets/fonts
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
