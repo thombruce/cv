@@ -10,7 +10,7 @@ jobs:
 
       - uses: fontist/setup-fontist@v2
       - run: fontist install "Fira Sans"
-      - run: fontist install "Font Awesome"
+      - run: fontist create-formula https://use.fontawesome.com/releases/v7.1.0/fontawesome-free-7.1.0-desktop.zip
 
       - uses: typst-community/setup-typst@v4
         with:
