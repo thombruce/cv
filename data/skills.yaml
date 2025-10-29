@@ -37,13 +37,13 @@
 - name: DevOps & Cloud
   icon: cloud
   skills:
+    - AWS
+    - Heroku
     - CI/CD
     - Code Review
-    - GitHub
-    - GitLab
+    - Git
     - SSH
     - Bash
-    - Vim
 
 - name: Tools
   icon: tools
