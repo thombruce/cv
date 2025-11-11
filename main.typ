@@ -74,10 +74,6 @@
         title: "Full Stack Web Developer @ Propheris",
         info: [_2019 --- Present_],
         [
-          // TODO: More detail for Propheris (and probably Imfuna too) like:
-          //       1. Third Party API integrations (health sector)
-          //       2. ElasticSearch upgrade, Rails upgrade
-          //       3. Redis dashboard upgrade (custom plugin development)
           Part of a small web development team, building and maintaining a patient research platform for the #highlight[NHS] written in #highlight[Ruby on Rails].
           #set text(size: sizes.text-s2)
           #icon-list((
