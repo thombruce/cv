@@ -74,12 +74,22 @@
         title: "Full Stack Web Developer @ Propheris",
         info: [_2019 --- Present_],
         [
+          // TODO: More detail for Propheris (and probably Imfuna too) like:
+          //       1. Third Party API integrations (health sector)
+          //       2. ElasticSearch upgrade, Rails upgrade
+          //       3. Redis dashboard upgrade (custom plugin development)
           Part of a small web development team, building and maintaining a patient research platform for the #highlight[NHS] written in #highlight[Ruby on Rails].
           #set text(size: sizes.text-s2)
           #icon-list((
             (icon: "lock", text: [Maintained strong data privacy standards and secure code in line with patient confidentiality standards.]),
+            (icon: "virus", text: [Rapid development of new data resources during COVID-19 pandemic, improving and providing new research insights.]),
             (icon: "chalkboard-user", text: [Rewrote documentation providing clearer guidelines for junior developers and code deployment practises.]),
-            (icon: "users", text: [Engaged in peer code review with other developers, both senior and junior, to maintain code quality.])
+            (icon: "users", text: [Engaged in peer code review with other developers, both senior and junior, to maintain code quality.]),
+            (icon: "circle-up", text: [Managed upgrades of #highlight[ElasticSearch] database and #highlight[Redmine] project management tool.]),
+            (icon: "laptop-code", text: [CLI builds and deployments using #highlight[Docker] and #highlight[Ansible].]),
+            (icon: "cubes", text: [Contributed frequently to internal tools used in managing a large codebase with #highlight[over 30 custom modules].]),
+            (icon: "handshake", text: [Regular involvement in B2B meetings with third-party developers and project managers for the co-development of our research APIs.]),
+            (icon: "shield-halved", text: [#highlight[Test Driven Development] (TDD) using #highlight[RSpec].]),
           ))
         ],
       )
@@ -92,7 +102,8 @@
           #set text(size: sizes.text-s2)
           #icon-list((
             (icon: "server", text: [Took the lead on #highlight[API] development and maintainence, ensuring a securely accessible backend for our mobile application.]),
-            (icon: "mobile", text: [Contributed to the frontend development of a mobile application using #highlight[React] and built with #highlight[Cordova].]),
+            (icon: "mobile", text: [Contributed frontend mobile application development using #highlight[React] and #highlight[Cordova].]),
+            (icon: "globe", text: [Daily #highlight[stand-up] meetings with our international team.]),
           ))
         ],
       )
@@ -105,7 +116,8 @@
           #set text(size: sizes.text-s2)
           #icon-list((
             (icon: "database", text: [Extensive use of raw #highlight[SQL] queries to improve the efficiency of complex research insights.]),
-            (icon: "database", text: [Polymorphism and advanced table joins enabling custom data types via Ruby on Rails' #highlight[ActiveRecord].]),
+            // (icon: "database", text: [Polymorphism and advanced table joins enabling custom data types via Ruby on Rails' #highlight[ActiveRecord].]),
+            (icon: "lock", text: [Preparations and post-review improvements in collaboration with a third-party #highlight[penetration testing] company.]),
           ))
         ]
       )
@@ -114,11 +126,10 @@
         title: "Lead Web Developer @ Print Graphic Ltd",
         info: [_2015_],
         [
-          Taken on as the sole web developer, expanding the offering of a print design firm and implementing in code the works of a small design team.
+          // Taken on as the sole web developer, expanding the offering of a print design firm and implementing in code the works of a small design team.
           #set text(size: sizes.text-s2)
           #icon-list((
-            (icon: "php", icon-solid: true, text: [Managed backend CMS platforms, WordPress and Joomla, based on PHP.]),
-            (icon: "bootstrap", icon-solid: true, text: [Built frontend content websites using #highlight[Bootstrap CSS]]),
+            (icon: "code", icon-solid: true, text: [Managed client content sites, writing frontend and backend code in #highlight[JavaScript] and #highlight[PHP].]),
           ))
         ]
       )
@@ -127,7 +138,7 @@
         title: "Full Stack Web Developer @ Independent",
         info: [_2013 --- 2016_],
         [
-          Always keen to maintain up-to-date knowledge of web development frameworks and practises.
+          // Always keen to maintain up-to-date knowledge of web development frameworks and practises.
           #set text(size: sizes.text-s2)
           #icon-list((
             (icon: "gem", icon-solid: true, text: [Developed several #highlight[Ruby on Rails] applications and #highlight[Open Source] plugins.]),
@@ -140,7 +151,10 @@
         title: "Full Stack Software Developer @ Rocket Dog Creative",
         info: [_2012 --- 2013_],
         [
-          Joined a small team of developers building and maintaining #highlight[Ruby on Rails] applications for several international clients.
+          #set text(size: sizes.text-s2)
+          #icon-list((
+            (icon: "gem", icon-solid: true, text: [Joined a small team developing #highlight[Ruby on Rails] applications for international clients.]),
+          ))
         ]
       )
      
@@ -148,7 +162,7 @@
         title: "Full Stack Web Developer @ View From Here",
         info: [_2012_],
         [
-          Solo developer contracted to rewrite a dated market research platform.
+          // Solo developer contracted to rewrite a dated market research platform.
           #set text(size: sizes.text-s2)
           #icon-list((
             (icon: "gem", icon-solid: true, text: [Rewrote a PERL-based market research web application and API in #highlight[Ruby on Rails].]),
@@ -159,7 +173,13 @@
       #section-element(
         title: "Web Administrator @ Aban Technology",
         info: [_2011 --- 2012_],
-        [Managed web-based sales and services for a small security equipment supplier, inclusive of writing and amending the #highlight[HTML] markup and #highlight[CSS] for storefront pages.]
+        [
+          // Solo developer contracted to rewrite a dated market research platform.
+          #set text(size: sizes.text-s2)
+          #icon-list((
+            (icon: "server", icon-solid: true, text: [Managed web services for a security supplier and helped to develop their storefront pages.]),
+          ))
+        ]
       )
 
     ]
