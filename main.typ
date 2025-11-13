@@ -37,7 +37,7 @@
           "Razer Blade Stealth 13\"",
           "Arch Linux",
           "Kitty",
-          "tmux",
+          // "tmux", // Just switched to using Kitty for most of what tmux previously gave me
           "Zsh",
           "Neovim",
         )
