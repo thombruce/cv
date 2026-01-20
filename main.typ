@@ -1,4 +1,5 @@
 #import "@preview/lavandula:0.1.1": *
+#import "@preview/cmarker:0.1.6"
 
 #show: lavandula-theme.with(
   custom-colors: (
@@ -70,114 +71,25 @@
   ],
   main-content: [
     #section(title: "Experience")[
-      #section-element(
-        title: "Full Stack Web Developer @ Propheris",
-        info: [_2019 --- Present_],
-        [
-          Part of a small web development team, building and maintaining a patient research platform for the #highlight[NHS] written in #highlight[Ruby on Rails].
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "lock", text: [Maintained strong data privacy standards and secure code in line with patient confidentiality standards.]),
-            (icon: "virus", text: [Rapid development of new data resources during COVID-19 pandemic, improving and providing new research insights.]),
-            (icon: "chalkboard-user", text: [Rewrote documentation providing clearer guidelines for junior developers and code deployment practises.]),
-            (icon: "users", text: [Engaged in peer code review with other developers, both senior and junior, to maintain code quality.]),
-            (icon: "circle-up", text: [Managed upgrades of #highlight[ElasticSearch] database and #highlight[Redmine] project management tool.]),
-            (icon: "laptop-code", text: [CLI builds and deployments using #highlight[Docker] and #highlight[Ansible].]),
-            (icon: "cubes", text: [Contributed frequently to internal tools used in managing a large codebase with #highlight[over 30 custom modules].]),
-            (icon: "handshake", text: [Regular involvement in B2B meetings with third-party developers and project managers for the co-development of our research APIs.]),
-            (icon: "shield-halved", text: [#highlight[Test Driven Development] (TDD) using #highlight[RSpec].]),
-          ))
-        ],
-      )
-
-      #section-element(
-        title: "Full Stack Software Developer @ Imfuna",
-        info: [_2017 --- 2018_],
-        [
-          Property inspection API written in #highlight[Ruby on Rails] serving a mobile application built using #highlight[Cordova].
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "server", text: [Took the lead on #highlight[API] development and maintainence, ensuring a securely accessible backend for our mobile application.]),
-            (icon: "mobile", text: [Contributed frontend mobile application development using #highlight[React] and #highlight[Cordova].]),
-            (icon: "globe", text: [Daily #highlight[stand-up] meetings with our international team.]),
-          ))
-        ],
-      )
-
-      #section-element(
-        title: "Full Stack Web Developer @ FlexMR",
-        info: [_2016 --- 2017_],
-        [
-          Market research platform focused on providing rich data insights.
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "database", text: [Extensive use of raw #highlight[SQL] queries to improve the efficiency of complex research insights.]),
-            // (icon: "database", text: [Polymorphism and advanced table joins enabling custom data types via Ruby on Rails' #highlight[ActiveRecord].]),
-            (icon: "lock", text: [Preparations and post-review improvements in collaboration with a third-party #highlight[penetration testing] company.]),
-          ))
-        ]
-      )
-
-      #section-element(
-        title: "Lead Web Developer @ Print Graphic Ltd",
-        info: [_2015_],
-        [
-          // Taken on as the sole web developer, expanding the offering of a print design firm and implementing in code the works of a small design team.
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "code", icon-solid: true, text: [Managed client content sites, writing frontend and backend code in #highlight[JavaScript] and #highlight[PHP].]),
-          ))
-        ]
-      )
-
-      #section-element(
-        title: "Full Stack Web Developer @ Independent",
-        info: [_2013 --- 2016_],
-        [
-          // Always keen to maintain up-to-date knowledge of web development frameworks and practises.
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "gem", icon-solid: true, text: [Developed several #highlight[Ruby on Rails] applications and #highlight[Open Source] plugins.]),
-            (icon: "wordpress", icon-solid: true, text: [Managed client #highlight[WordPress] sites, developing backend plugins and frontend UIs.]),
-          ))
-        ]
-      )
-
-      #section-element(
-        title: "Full Stack Software Developer @ Rocket Dog Creative",
-        info: [_2012 --- 2013_],
-        [
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "gem", icon-solid: true, text: [Joined a small team developing #highlight[Ruby on Rails] applications for international clients.]),
-          ))
-        ]
-      )
-     
-      #section-element(
-        title: "Full Stack Web Developer @ View From Here",
-        info: [_2012_],
-        [
-          // Solo developer contracted to rewrite a dated market research platform.
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "gem", icon-solid: true, text: [Rewrote a PERL-based market research web application and API in #highlight[Ruby on Rails].]),
-          ))
-        ]
-      )
-
-      #section-element(
-        title: "Web Administrator @ Aban Technology",
-        info: [_2011 --- 2012_],
-        [
-          // Solo developer contracted to rewrite a dated market research platform.
-          #set text(size: sizes.text-s2)
-          #icon-list((
-            (icon: "server", icon-solid: true, text: [Managed web services for a security supplier and helped to develop their storefront pages.]),
-          ))
-        ]
-      )
-
+      #for (job) in yaml("data/experience.yaml") {
+        section-element(
+          title: job.title,
+          info: [#job.info],
+          [
+            #if job.description != "" [
+              #cmarker.render(job.description)
+            ]
+            #set text(size: sizes.text-s2)
+            #icon-list(
+              job.achievements.map(achievement => (
+                icon: achievement.icon,
+                icon-solid: achievement.at("icon-solid", default: false),
+                text: cmarker.render(achievement.text)
+              ))
+            )
+          ],
+        )
+      }
     ]
 
     #section(title: "Education")[

@@ -5,6 +5,7 @@
     - JavaScript (ES5+)
     - TypeScript
     - Rust
+    - PHP
 
 - name: Backend Development
   icon: server
@@ -12,7 +13,7 @@
     - Ruby on Rails
     - Node.js
     - Express.js
-    - PHP
+    - WordPress
     - REST
 
 - name: Frontend Development

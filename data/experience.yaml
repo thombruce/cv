@@ -1,0 +1,85 @@
+- title: "Full Stack Web Developer @ Propheris"
+  info: "2019 --- Present"
+  description: "Part of a small web development team, building and maintaining a patient research platform for the **NHS** written in **Ruby on Rails**."
+  achievements:
+    - icon: "lock"
+      text: "Maintained strong data privacy standards and secure code in line with patient confidentiality standards."
+    - icon: "virus"
+      text: "Rapid development of new data resources during COVID-19 pandemic, improving and providing new research insights."
+    - icon: "chalkboard-user"
+      text: "Rewrote documentation providing clearer guidelines for junior developers and code deployment practises."
+    - icon: "users"
+      text: "Engaged in peer code review with other developers, both senior and junior, to maintain code quality."
+    - icon: "circle-up"
+      text: "Managed upgrades of **ElasticSearch** database and **Redmine** project management tool."
+    - icon: "laptop-code"
+      text: "CLI builds and deployments using **Docker** and **Ansible**."
+    - icon: "cubes"
+      text: "Contributed frequently to internal tools used in managing a large codebase with **over 30 custom modules**."
+    - icon: "handshake"
+      text: "Regular involvement in B2B meetings with third-party developers and project managers for the co-development of our research APIs."
+    - icon: "shield-halved"
+      text: "**Test Driven Development** (TDD) using **RSpec**."
+
+- title: "Full Stack Software Developer @ Imfuna"
+  info: "2017 --- 2018"
+  description: "Property inspection API written in **Ruby on Rails** serving a mobile application built using **Cordova**."
+  achievements:
+    - icon: "server"
+      text: "Took the lead on **API** development and maintainence, ensuring a securely accessible backend for our mobile application."
+    - icon: "mobile"
+      text: "Contributed frontend mobile application development using **React** and **Cordova**."
+    - icon: "globe"
+      text: "Daily **stand-up** meetings with our international team."
+
+- title: "Full Stack Web Developer @ FlexMR"
+  info: "2016 --- 2017"
+  description: "Market research platform focused on providing rich data insights."
+  achievements:
+    - icon: "database"
+      text: "Extensive use of raw **SQL** queries to improve the efficiency of complex research insights."
+    - icon: "lock"
+      text: "Preparations and post-review improvements in collaboration with a third-party **penetration testing** company."
+
+- title: "Lead Web Developer @ Print Graphic Ltd"
+  info: "2015"
+  description: ""
+  achievements:
+    - icon: "code"
+      icon-solid: true
+      text: "Managed client content sites, writing frontend and backend code in **JavaScript** and **PHP**."
+
+- title: "Full Stack Web Developer @ Independent"
+  info: "2013 --- 2016"
+  description: ""
+  achievements:
+    - icon: "gem"
+      icon-solid: true
+      text: "Developed several **Ruby on Rails** applications and **Open Source** plugins."
+    - icon: "wordpress"
+      icon-solid: true
+      text: "Managed client **WordPress** sites, developing backend plugins and frontend UIs."
+
+- title: "Full Stack Software Developer @ Rocket Dog Creative"
+  info: "2012 --- 2013"
+  description: ""
+  achievements:
+    - icon: "gem"
+      icon-solid: true
+      text: "Joined a small team developing **Ruby on Rails** applications for international clients."
+
+- title: "Full Stack Web Developer @ View From Here"
+  info: "2012"
+  description: ""
+  achievements:
+    - icon: "gem"
+      icon-solid: true
+      text: "Rewrote a PERL-based market research web application and API in **Ruby on Rails**."
+
+- title: "Web Administrator @ Aban Technology"
+  info: "2011 --- 2012"
+  description: ""
+  achievements:
+    - icon: "server"
+      icon-solid: true
+      text: "Managed web services for a security supplier and helped to develop their storefront pages."
